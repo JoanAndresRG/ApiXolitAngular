@@ -1,14 +1,14 @@
 <div class="col-lg-3 col-sm-3 col-md-3">
     <div class="card">
-        <h4>{{nombre}}</h4>
-        <div class="input-field col s1 ">
-            <label for="unidades Disponibles ">Unidades Disponibles: {{cantidad}} </label>
-        </div>
+        {{productoEntrada.ValorVentaConIva}}
+        <h4>Nombre: {{productoEntrada.Nombre}}</h4>
         <img src="https://picsum.photos/200/300/" alt="no found" width="40%" />
         <div class="middle">
             <a href="" class="btn btn1">Add</a>
             <hr>
-            <em>{{valorTotal}}</em>
+            <em>Unidades Disponibles: {{productoEntrada.CantidadUnidadesInventario}} </em>
+            <br>
+            <em>Venta: {{productoEntrada.ValorVentaConIva}}</em>
         </div>
     </div>
 </div>

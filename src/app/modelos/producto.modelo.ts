@@ -1,5 +1,3 @@
-
-
 export class ModeloProducto{
      Id?: number;
      Nombre?:string;

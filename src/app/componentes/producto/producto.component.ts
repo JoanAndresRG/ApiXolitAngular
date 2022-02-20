@@ -8,13 +8,10 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
   styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent implements OnInit {
-  @Input() productoEntrada: ModeloProducto = {};
-  nombre: string = '';
-  cantidad: number = 0;
-  valorTotal: number = 0;
-  productoHtml: ModeloProducto = {};
+  @Input() productoEntrada !: ModeloProducto;
 
-  constructor(private administracion: AdministracionService) { }
+  constructor(private administracion: AdministracionService
+  ) { }
 
   ngOnInit(): void {
     this.pintarEntrada();
@@ -23,15 +20,5 @@ export class ProductoComponent implements OnInit {
 
   pintarEntrada() {
     console.log(this.productoEntrada, ' PRUEBA JAGA');
-    this.nombre = this.productoEntrada.Nombre;
-    this.cantidad = this.productoEntrada.CantidadUnidadesInventario;
-    this.valorTotal = this.productoEntrada.ValorVentaConIva;
-
-    this.productoHtml = this.productoEntrada;
-
   }
-
-
-
-
 }
