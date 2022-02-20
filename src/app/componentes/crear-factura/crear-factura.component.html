@@ -1,0 +1,53 @@
+<div class="row">
+    <h3>Crear Factura Para La DIAN</h3>
+    <form class="col s12" (ngSubmit)="GuardarFactura()">
+        <div class=" row ">
+            <div class="input-field col s4 ">
+                <input formControlName="nombresCliente" type="text " class="validate ">
+                <label for="nombresCliente">Nombre</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="apellidosCliente" type="text " class="validate ">
+                <label for="apellidosCliente">Apellido</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="numeroIdentificacion" type="text " class="validate ">
+                <label for="numeroIdentificacion">Número Identificación</label>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="input-field col s4 ">
+                <input formControlName="fechaDeVenta" type="text " class="validate ">
+                <label for="fechaDeVenta">Fecha de Venta</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="totalPrecioVenta" type="number " class="validate ">
+                <label for="totalPrecioVenta">Total Precio Venta</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="subtotalSinIva" type="number " class="validate ">
+                <label for="subtotalSinIva">Subtotal Sin IVA</label>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="input-field col s4 ">
+                <input formControlName="direcionEnvio" type="text " class="validate ">
+                <label for="direcionEnvio">Dirección de Envio</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="telefono" type="text " class="validate ">
+                <label for="telefono">Teléfono</label>
+            </div>
+            <div class="input-field col s4 ">
+                <input formControlName="fechaDeEntrega" type="text " class="validate ">
+                <label for="fechaDeEntrega">Fecha  de Entrega</label>
+            </div>
+        </div>
+        <div class="col s6 ">
+            <p>
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn " type="submit ">
+                <i class=" material-icons right ">send</i>Comprar y Enviar</button>
+            </p>
+        </div>
+    </form>
+</div>
