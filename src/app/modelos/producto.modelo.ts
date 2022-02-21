@@ -3,5 +3,5 @@ export class ModeloProducto{
      Nombre?:string;
      ValorVentaConIva?: number;
      CantidadUnidadesInventario?: number;
-     PorcentajeIvaAplicado?: number;
+     PorcentajeIVAAplicado?: number;
 }

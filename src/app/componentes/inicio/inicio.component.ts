@@ -9,17 +9,17 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
 })
 export class InicioComponent implements OnInit {
 
-  productos: ModeloProducto[]=[];
+  productos : ModeloProducto[] = [];
   constructor(private administracion: AdministracionService) { }
 
   ngOnInit(): void {
     this.ObtenerProductos();
-    }
+  }
 
 
-  private ObtenerProductos(){
-    this.administracion.ObtenerProductos().subscribe(result =>{
-      this.productos = result;
+  ObtenerProductos() {
+    this.administracion.ObtenerProductos().subscribe(result => {
+      this.productos = result
     })
   }
 }

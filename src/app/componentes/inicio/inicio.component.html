@@ -20,7 +20,7 @@
                     <div class="col s12 ">
                         <p>
                             <button class="waves-effect waves-light btn" type="submit ">
-                            <i class=" material-icons right ">send</i>Fin Agregar Productos</button>
+                            <i class=" material-icons left ">attach_money</i>Fin Agregar Productos</button>
                         </p>
                     </div>
                     <div class="find-box">
@@ -84,4 +84,32 @@
             </div>
         </div>
     </div>
+    <table class="table responsive">
+        <thead>
+            <tr>
+                <th>
+                    Nombres
+                </th>
+                <th>
+                    Cantidad
+                </th>
+                <th>
+                    ValorVentaConIva
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of productos">
+                <td>
+                    {{p.Nombre}}
+                </td>
+                <td>
+                    {{p.CantidadUnidadesInventario +"45"}}
+                </td>
+                <td>
+                    {{p.ValorVentaConIva+"45"}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>

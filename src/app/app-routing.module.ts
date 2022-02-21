@@ -6,7 +6,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 const routes: Routes = [
   {
     path:"inicio",
-    component:InicioComponent
+    component: InicioComponent
   },
   {
     path:"",

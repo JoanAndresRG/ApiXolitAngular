@@ -8,10 +8,8 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
   styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent implements OnInit {
-  @Input() productoEntrada !: ModeloProducto;
-
-  constructor(private administracion: AdministracionService
-  ) { }
+  @Input() productoEntrada : ModeloProducto = {};
+  constructor(private administracion: AdministracionService) { }
 
   ngOnInit(): void {
     this.pintarEntrada();
@@ -19,6 +17,6 @@ export class ProductoComponent implements OnInit {
 
 
   pintarEntrada() {
-    console.log(this.productoEntrada, ' PRUEBA JAGA');
+    console.log(this.productoEntrada);
   }
 }
