@@ -8,18 +8,14 @@ import { ModeloProducto } from '../modelos/producto.modelo';
   providedIn: 'root'
 })
 export class AdministracionService {
-  url = 'https://localhost:44316';
+  url = 'https://localhost:5001';
   constructor(private http: HttpClient) { }
 
-  ObtenerProductos(): Observable<any> {
-    return this.http.get(`${this.url}/api/Producto/ObtenerProductos`);
-  }
-
-  ObtenerProductos2(): Observable<ModeloProducto[]> {
+  ObtenerProductos(): Observable<ModeloProducto[]> {
     return this.http.get<ModeloProducto[]>(`${this.url}/api/Producto/ObtenerProductos`);
   }
 
   CrearFactura(factura: ModeloFactura): Observable<any> {
-    return this.http.post<ModeloFactura>(`${this.url}/api/CrearFactura`, factura);
+    return this.http.post<ModeloFactura>(`${this.url}/api/Factura/CrearFactura`, factura);
   }
 }

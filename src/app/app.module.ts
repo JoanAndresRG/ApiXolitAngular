@@ -7,6 +7,8 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductoComponent } from './componentes/producto/producto.component';
+import { CrearFacturaComponent } from './componentes/crear-factura/crear-factura.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { ProductoComponent } from './componentes/producto/producto.component';
     PiePaginaComponent,
     InicioComponent,
     ErrorComponent,
-    ProductoComponent 
+    ProductoComponent,
+    CrearFacturaComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

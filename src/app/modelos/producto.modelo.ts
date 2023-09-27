@@ -1,7 +1,7 @@
 export class ModeloProducto{
-     Id?: number;
-     Nombre?:string;
-     ValorVentaConIva?: number;
-     CantidadUnidadesInventario?: number;
-     PorcentajeIVAAplicado?: number;
+     id?: number;
+     nombre?:string;
+     valorVentaConIva?: number;
+     cantidadUnidadesInventario?: number;
+     porcentajeIVAAplicado?: number;
 }

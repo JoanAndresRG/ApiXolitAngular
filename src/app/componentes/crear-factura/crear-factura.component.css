@@ -1,0 +1,18 @@
+.row {
+    background-color: #0a284c;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 50px;
+    color: #fff;
+}
+
+label {
+    color: #fff;
+    text-shadow: 2px 0px 3px #000;
+}
+
+input {
+    background-color: #b5bec9;
+}

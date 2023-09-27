@@ -26,59 +26,11 @@
                     <div class="find-box">
                         <h1>Factura<br>DIAN</h1>
                         <hr>
-                        <h4>Datos registrados del cliente</h4>
+                        <h4>Registrar datos del cliente</h4>
                     </div>
                     <div class="row">
-                        <form class="col s12">
-                            <div class=" row ">
-                                <div class="input-field col s4 ">
-                                    <input id="nombre " type="text " class="validate ">
-                                    <label for="nombre ">Nombre</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="apellido " type="text " class="validate ">
-                                    <label for="apellido ">Apellido</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="numeroIdentificacion " type="text " class="validate ">
-                                    <label for="numeroIdentificacion ">Número Identificación</label>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="input-field col s4 ">
-                                    <input id="fechaVenta " type="text " class="validate ">
-                                    <label for="fechaVenta ">Fecha de Venta</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="totalPrecioVenta " type="number " class="validate ">
-                                    <label for="totalPrecioVenta ">Total Precio Venta</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="subtotalSinIva " type="number " class="validate ">
-                                    <label for="subtotalSinIva ">Subtotal Sin IVA</label>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="input-field col s4 ">
-                                    <input id="direcionEnvio " type="text " class="validate ">
-                                    <label for="direcionEnvio ">Dirección de Envio</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="telefono " type="text " class="validate ">
-                                    <label for="telefono ">Teléfono</label>
-                                </div>
-                                <div class="input-field col s4 ">
-                                    <input id="fechaEntrega " type="text " class="validate ">
-                                    <label for="fechaEntrega ">Fecha  de Entrega</label>
-                                </div>
-                            </div>
-                            <div class="col s12 ">
-                                <p>
-                                    <button class="waves-effect waves-light btn" type="submit ">
-                                    <i class=" material-icons right ">send</i>Comprar y Enviar</button>
-                                </p>
-                            </div>
-                        </form>
+                        <button class="waves-effect waves-light btn" (click)="RedirectAdmin()">
+                                    <i class=" material-icons right ">send</i>Crear Factura</button>
                     </div>
                 </div>
             </div>
@@ -101,13 +53,13 @@
         <tbody>
             <tr *ngFor="let p of productos">
                 <td>
-                    {{p.Nombre}}
+                    {{p.nombre}}
                 </td>
                 <td>
-                    {{p.CantidadUnidadesInventario +"45"}}
+                    {{p.cantidadUnidadesInventario}}
                 </td>
                 <td>
-                    {{p.ValorVentaConIva+"45"}}
+                    {{p.valorVentaConIva}}
                 </td>
             </tr>
         </tbody>

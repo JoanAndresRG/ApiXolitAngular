@@ -1,13 +1,13 @@
 <div class="row">
     <h3>Crear Factura Para La DIAN</h3>
-    <form class="col s12" (ngSubmit)="GuardarFactura()">
+    <form class="col s12" [formGroup]="fgValidador" (ngSubmit)="GuardarFactura()">
         <div class=" row ">
             <div class="input-field col s4 ">
                 <input formControlName="nombresCliente" type="text " class="validate ">
                 <label for="nombresCliente">Nombre</label>
             </div>
             <div class="input-field col s4 ">
-                <input formControlName="apellidosCliente" type="text " class="validate ">
+                <input formControlName="apellidoCliente" type="text " class="validate ">
                 <label for="apellidosCliente">Apellido</label>
             </div>
             <div class="input-field col s4 ">
@@ -17,7 +17,7 @@
         </div>
         <div class="row ">
             <div class="input-field col s4 ">
-                <input formControlName="fechaDeVenta" type="text " class="validate ">
+                <input formControlName="fechaDeVenta" type="text " class="validate">
                 <label for="fechaDeVenta">Fecha de Venta</label>
             </div>
             <div class="input-field col s4 ">
@@ -39,15 +39,13 @@
                 <label for="telefono">Teléfono</label>
             </div>
             <div class="input-field col s4 ">
-                <input formControlName="fechaDeEntrega" type="text " class="validate ">
+                <input formControlName="fechaDeEntrega" type="date" class="validate ">
                 <label for="fechaDeEntrega">Fecha  de Entrega</label>
             </div>
         </div>
-        <div class="col s6 ">
-            <p>
-                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn " type="submit ">
+        <div class="col s6">
+            <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn " type="submit ">
                 <i class=" material-icons right ">send</i>Comprar y Enviar</button>
-            </p>
         </div>
     </form>
 </div>

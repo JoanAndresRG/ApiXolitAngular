@@ -1,9 +1,8 @@
 export class ModeloFactura{
     Id?:number;
     NombreCliente?: string;
-    ApellidosCliente?: string;
+    ApellidoCliente?: string;
     NumeroIdentificacion?: string;
-    FechaDeVenta?: string;
     TotalPrecioVenta?: number;
     SubtotalSinIVA?: number;
     DireccionEnvio?: string;

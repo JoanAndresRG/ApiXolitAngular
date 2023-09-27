@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModeloProducto } from 'src/app/modelos/producto.modelo';
 import { AdministracionService } from 'src/app/servicios/administracion.service';
 
@@ -9,17 +10,26 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
 })
 export class InicioComponent implements OnInit {
 
-  productos : ModeloProducto[] = [];
-  constructor(private administracion: AdministracionService) { }
+  productos: ModeloProducto[] = [];
+  constructor(
+    private administracion: AdministracionService,
+    private router : Router
+  ) { }
 
   ngOnInit(): void {
     this.ObtenerProductos();
   }
 
-
   ObtenerProductos() {
     this.administracion.ObtenerProductos().subscribe(result => {
-      this.productos = result
+      this.productos = result;
     })
   }
+
+  RedirectAdmin(){
+    console.log('test-enter');
+    
+    this.router.navigate(["/administracion"]);
+  }
+
 }
